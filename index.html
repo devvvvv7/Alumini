@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanmati Alumni Network - Legacy Since 1982</title>
+    <meta name="description" content="Official alumni network of Sanmati H.S. School - connecting over 100,000+ alumni worldwide since 1982">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Sanmati Alumni</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#directory">Directory</a>
+                <a href="#events">Events</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Sanmati Alumni Network</h1>
+                <p class="hero-subtitle">Since 1982 — A Legacy of Excellence & Brotherhood</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('directory')">Browse Alumni</button>
+                    <button class="btn btn-secondary" onclick="openRegistration()">Register Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Timeline -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Our Journey Through Time</h2>
+            <div class="timeline">
+                <div class="timeline-item active" data-year="1982">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Foundation</h3>
+                        <p>Sanmati H.S. School established with the vision of nurturing future leaders</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="1990s">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Expansion Era</h3>
+                        <p>Rapid growth in student enrollment and infrastructure development</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2000s">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Digital Age</h3>
+                        <p>Introduction of modern technology and global educational partnerships</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="Today">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Global Network</h3>
+                        <p>100,000+ alumni across 50+ countries making their mark worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Statistics -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="100000">0</div>
+                    <div class="stat-label">Alumni Worldwide</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="42">0</div>
+                    <div class="stat-label">Years of Legacy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Countries Represented</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="1000">0</div>
+                    <div class="stat-label">Diverse Professionals</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Directory -->
+    <section id="directory" class="directory-section">
+        <div class="container">
+            <h2 class="section-title">Alumni Directory</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search alumni by name, batch, or profession..." class="search-input">
+                <div class="filter-buttons">
+                    <select id="batchFilter" class="filter-select">
+                        <option value="">All Batches</option>
+                        <option value="2020-2024">2020-2024</option>
+                        <option value="2015-2019">2015-2019</option>
+                        <option value="2010-2014">2010-2014</option>
+                        <option value="2005-2009">2005-2009</option>
+                    </select>
+                    <select id="professionFilter" class="filter-select">
+                        <option value="">All Professions</option>
+                        <option value="Engineer">Engineer</option>
+                        <option value="Doctor">Doctor</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Entrepreneur">Entrepreneur</option>
+                    </select>
+                </div>
+            </div>
+            <div class="alumni-grid" id="alumniGrid">
+                <!-- Alumni cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Program -->
+    <section class="impact-section">
+        <div class="container">
+            <h2 class="section-title">Impact Program</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">🌐</div>
+                    <h3>Network</h3>
+                    <p>Connect with fellow alumni across the globe and build meaningful professional relationships</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">📚</div>
+                    <h3>Learn</h3>
+                    <p>Access mentorship programs, workshops, and continuous learning opportunities</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">🚀</div>
+                    <h3>Grow</h3>
+                    <p>Advance your career through our extensive network and collaborative opportunities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Spotlight -->
+    <section class="spotlight-section">
+        <div class="container">
+            <h2 class="section-title">Alumni Spotlight</h2>
+            <div class="spotlight-carousel">
+                <div class="spotlight-track" id="spotlightTrack">
+                    <div class="spotlight-card active">
+                        <div class="spotlight-content">
+                            <p>"Sanmati shaped my career path and gave me the foundation to become a successful entrepreneur. The values instilled here continue to guide me."</p>
+                            <div class="spotlight-author">
+                                <strong>Rajesh Kumar</strong>
+                                <span>Batch 1995 • Tech Entrepreneur</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spotlight-card">
+                        <div class="spotlight-content">
+                            <p>"The education and mentorship I received at Sanmati prepared me for my medical career. Today, I'm proud to serve communities worldwide."</p>
+                            <div class="spotlight-author">
+                                <strong>Dr. Priya Sharma</strong>
+                                <span>Batch 2002 • Cardiac Surgeon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spotlight-card">
+                        <div class="spotlight-content">
+                            <p>"Sanmati's emphasis on character building and academic excellence helped me excel in my engineering career at leading tech companies."</p>
+                            <div class="spotlight-author">
+                                <strong>Amit Patel</strong>
+                                <span>Batch 2010 • Software Engineer at Google</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spotlight-nav">
+                    <button class="spotlight-btn" onclick="previousSpotlight()">‹</button>
+                    <button class="spotlight-btn" onclick="nextSpotlight()">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+        <div class="container">
+            <h2 class="section-title">Events & Reunions</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="event-month">Mar</div>
+                        <div class="event-day">15</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Annual Alumni Meet 2025</h3>
+                        <p>Join us for our biggest reunion celebration with alumni from all batches</p>
+                        <div class="event-location">📍 Sanmati Campus, Main Auditorium</div>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="event-month">Apr</div>
+                        <div class="event-day">22</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Career Mentorship Session</h3>
+                        <p>Industry leaders share insights and provide career guidance to recent graduates</p>
+                        <div class="event-location">📍 Online Webinar</div>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="event-month">May</div>
+                        <div class="event-day">10</div>
+                    </div>
+                    <div class="event-details">
+                        <h3>Legacy Celebration</h3>
+                        <p>Celebrating 43 years of educational excellence and alumni achievements</p>
+                        <div class="event-location">📍 City Convention Center</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principal's Note -->
+    <section class="principal-section">
+        <div class="container">
+            <div class="principal-content">
+                <div class="principal-image">
+                    <div class="principal-photo"></div>
+                </div>
+                <div class="principal-message">
+                    <h2>Principal's Message</h2>
+                    <p>"Our alumni are the true ambassadors of Sanmati's legacy. Each one of you carries forward the values of integrity, excellence, and service that we cherish. Your achievements across the globe make us immensely proud and inspire current students to dream big and work hard."</p>
+                    <p>"As we continue to grow our alumni network, I encourage you to stay connected, mentor the next generation, and continue the tradition of excellence that defines Sanmati."</p>
+                    <div class="principal-signature">
+                        <strong>Mr.Chandrakant Sharma</strong>
+                        <span>Principal, Sanmati H.S. School</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Connected</h2>
+                <p>Join our newsletter to receive updates about alumni events, reunions, and success stories</p>
+                <form class="newsletter-form" onsubmit="submitNewsletter(event)">
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Batch Year">
+                        <input type="text" placeholder="Current Profession">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subscribe to Newsletter</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sanmati H.S. School</h3>
+                    <p>Building futures since 1982</p>
+                    <div class="footer-motto">"Live & Let Live"</div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p>📧 alumni@sanmati.edu.in</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>📍 Sanmati Road, Education District</p>
+                    <p>City, State - 123456</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#directory">Alumni Directory</a>
+                    <a href="#events">Events</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1982–2025 Sanmati Alumni Network. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
